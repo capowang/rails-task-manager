@@ -1,0 +1,13 @@
+<h1>Tasks</h1>
+<% @tasks.each do |task| %>
+  <!-- link_to "ANCHOR", path -->
+<h3><%= link_to task.title, task_path(task)%></h3>
+<p><%= link_to "delete", destroy_task_path(task.id), method: :delete %></p>
+
+  
+<% end %>
+
+<h3><%= link_to "Create new", new_task_path %></h3>
+
+
+
